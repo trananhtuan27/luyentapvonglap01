@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkNumber(number) {
+        let check = false;
+        if (number % 7 == 0 && number > 0) {
+            check = true;
+        }
+        return check;
+    }
+    function coutNumber(number) {
+        let dem = 0;
+        let i = 0;
+        let result = [];
+        while ((dem < number)) {
+            if (checkNumber(i) == true) {
+                result.push(i);
+                dem++;
+            }
+            i++;
+        }
+        return result;
+    }
+    let number = Number(prompt("Enter the number:"));
+    document.write(coutNumber(number));
+</script>
+</body>
+</html>
